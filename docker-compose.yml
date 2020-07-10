@@ -1,0 +1,35 @@
+version: '2.0'
+#volumes:
+#- ./database:/docker-entrypoint-initdb.d
+#volumes:
+#- ${PWD}/db-scripts:/docker-entrypoint-initdb.d
+#-./www/db-scripts/initdb.sql:/docker-entrypoint-initdb.d/0_init.sql
+#      command: mysqld --init-file='/www/db-scripts/initdb.sql'
+#command: mysqld --init-file='/docker-entrypoint-initdb.d/init.sql'
+services:
+  mysql:
+    image: mysql:5.7.30
+    container_name: docker-mysql_5_7
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Temporal001
+      MYSQL_DATABASE: dbpet
+      MYSQL_USER: pet_user
+      MYSQL_PASSWORD: pet_password
+    volumes:
+        - ${PWD}/www/db-scripts:/docker-entrypoint-initdb.d/:rw
+  web:
+    build:
+         context: .
+         dockerfile: ${PWD}/Dockerfile-php
+    container_name: docker-php_7_3
+    ports:
+      - "80:80"
+    volumes:
+      - ${PWD}/www:/var/www/html
+    links:
+      - mysql
+volumes:
+    persistent:

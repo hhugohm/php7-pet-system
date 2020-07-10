@@ -1,0 +1,35 @@
+version: '3.8'
+#volumes:
+#      - ./database:/docker-entrypoint-initdb.d
+#volumes:
+#- ${PWD}/db-scripts:/docker-entrypoint-initdb.d
+services:
+  mysql:
+    build:
+         context: .
+         dockerfile: $PWD/Dockerfile-mysql
+    container_name: docker-mysql
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Temporal001
+      MYSQL_DATABASE: dbcnp
+      MYSQL_USER: pet_user
+      MYSQL_PASSWORD: pet_password
+    volumes:
+        - ${PWD}/www/db-scripts/initdb.sql:/docker-entrypoint-initdb.d
+        - persistent:/var/lib/mysql
+  web:
+    build:
+         context: .
+         dockerfile: $PWD/Dockerfile-php
+    container_name: docker-php
+    ports:
+      - "80:80"
+    volumes:
+      - ${PWD}/www:/var/www/html
+    links:
+      - mysql
+volumes:
+    persistent:

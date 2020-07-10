@@ -1,9 +1,9 @@
 <?php
 /* Database config */
-$db_host		= 'localhost';
-$db_user		= 'root';
-$db_pass		= '';
-$db_database	= 'dbcnp'; 
+$db_host		= 'mysql:3306';
+$db_user		= 'pet_user';
+$db_pass		= 'pet_password';
+$db_database	= 'dbpet'; 
 /* End config */
 
 $con = mysqli_connect($db_host, $db_user, $db_pass, $db_database);

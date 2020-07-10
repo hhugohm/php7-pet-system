@@ -56,7 +56,7 @@
 <br><br>
 <div class="container">
         <section id="contact-info">
-                <center><span style="font-size:35px; font-weight:bold; font-family:verdana; color:blue;">How to Reach Us?</span></center>
+                <center><span style="font-size:35px; font-weight:bold; font-family:verdana; color:blue;">Quieres contactarnos?</span></center>
 
             <div class="left wow fadeInDown">
                 <
@@ -66,11 +66,11 @@
                <div class="col-md-6">
                 <p class="lead">
                     <br>
-                    <p><span style="font-size:20px; font-weight:bold; font-family:verdana; color:red;">Maria Flores</span>
-                    <br><b>Address:</b> Brgy.Camansi Kabankalan City Negros Occidental<b><br>Tel/Phone:</b> +639074985072 / 09655323255<b><br>Email Address:</b> Floresmd3@gmail.com</p>
+                    <p><span style="font-size:20px; font-weight:bold; font-family:verdana; color:red;">Hugo Hidalgo</span>
+                    <br><b>Direccion:</b> Av Reforma - Ciudad de Mexico<b><br>Tel/Phone:</b> +52 5541833312 / +52 5541833300<b><br>Email Address:</b> hugo.hidalgo@gmail.com</p>
                     <hr>
-                    <span style="font-size:20px; font-weight:bold; font-family:verdana; color:Violet;">We are open</span>
-                    <p><b>MONDAY TO FRIDAY -- 8:00AM - 5:00PM</b></p>
+                    <span style="font-size:20px; font-weight:bold; font-family:verdana; color:Violet;">Horarios de atencion</span>
+                    <p><b>LUNES - VIERNES -- 8:00AM - 5:00PM</b></p>
                 </p>
                 <hr>
                 <table style="width:80px;">
